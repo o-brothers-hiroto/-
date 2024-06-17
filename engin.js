@@ -14,6 +14,17 @@ function draw(){
 let object2 = new Image();
 object2.src = 'human1.png'
 
+let object3 = new Image();
+object3.src = 'o2illust.png';
+
+let item ={x:700,y:500};
+
+let object4 = new Image();
+object4.src = 'unit.png';
+
+let unit ={x:1000,y:1000};
+
+
 let gazo = {x:0,y:0};
 function move(){
 if(gazo.x >=1600){
@@ -29,6 +40,8 @@ function draw(){
     ctx.clearRect(0,0,1600,1200);
     ctx.drawImage(object1,0,0);
     ctx.drawImage(object2, gazo.x, gazo.y);
+    ctx.drawImage(object3, item.x, item.y);
+    ctx.drawImage(object4, unit.x, unit.y);
     window.requestAnimationFrame(draw);
 }
 draw();
